@@ -1,0 +1,156 @@
+{
+    "pages": [
+        {
+            "id": 1,
+            "items": [
+                {
+                    "id": 1,
+                    "elementId": "aside-content-list-item-1",
+                    "caption": "ABONNEMENTEN",
+                    "icon": "📅"
+                },
+                {
+                    "id": 2,
+                    "elementId": "aside-content-list-item-2",
+                    "caption": "APPARATEN",
+                    "icon": "☕"
+                },
+                {
+                    "id": 3,
+                    "elementId": "aside-content-list-item-3",
+                    "caption": "KOFFIE-INGREDIENTEN",
+                    "icon": "🌱"
+                }
+            ]
+            
+        },
+        {
+            "id": 2,
+            "items": [
+                {
+                    "id": 1,
+                    "elementId": "aside-content-list-item-1",
+                    "caption": "PIZZA",
+                    "icon": "🍕"
+                },
+                {
+                    "id": 2,
+                    "elementId": "aside-content-list-item-2",
+                    "caption": "WERELD",
+                    "icon": "🌍"
+                },
+                {
+                    "id": 3,
+                    "elementId": "aside-content-list-item-3",
+                    "caption": "MUZIEK",
+                    "icon": "🎵"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "items": [
+                {
+                    "id": 1,
+                    "elementId": "content-onsidee",
+                    "caption": "ONS IDEE",
+                    "icon": "💡"        
+                },
+                {
+                    "id": 2,
+                    "elementId": "content-locatie",
+                    "caption": "ONZE LOCATIE",
+                    "icon": "🌍"
+                },
+                {
+                    "id": 3,
+                    "elementId": "content-vacatures",
+                    "caption": "VACATURES",
+                    "icon": "📰"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "items": [
+                {
+                    "id": 1,
+                    "elementId": "coffeefarmer",
+                    "caption": "DE BOER",
+                    "icon": "👨‍🌾"        
+                },
+                {
+                    "id": 2,
+                    "elementId": "coffeebeans",
+                    "caption": "GESCHIEDENIS",
+                    "icon": "🔙"
+                },
+                {
+                    "id": 3,
+                    "elementId": "coffeedrying",
+                    "caption": "DROOGPROCES",
+                    "icon": "🌅"
+                },
+                {
+                    "id": 4,
+                    "elementId": "coffeebeansroast",
+                    "caption": "KOFFIEBRANDEN",
+                    "icon": "🔥"
+                },
+                {
+                    "id": 5,
+                    "elementId": "coffeemachine",
+                    "caption": "KOFFIEZETAPPARAAT",
+                    "icon": "☕"
+                }
+              ]
+        },
+        {
+            "id": 5,
+            "items": [
+                {    
+                    "id": 1,
+                    "elementId": "category-koffiemachines",
+                    "caption": "KOFFIEMACHINES",
+                    "icon": "🍵"        
+                },
+                {
+                    "id": 2,
+                    "elementId": "category-koffie",
+                    "caption": "KOFFIE",
+                    "icon": "☕️"
+                },
+                {
+                    "id": 3,
+                    "elementId": "category-accessoires",
+                    "caption": "ACCESSOIRES",
+                    "icon": "🥛"
+                }
+            ]
+        }
+        ,
+        {
+            "id": 6,
+            "items": [
+                {    
+                    "id": 1,
+                    "elementId": "totaalconcept",
+                    "caption": "TOTAALCONCEPT",
+                    "icon": "⚙️"        
+                },
+                {
+                    "id": 2,
+                    "elementId": "maak-je-keuze",
+                    "caption": "MAAK JE KEUZE",
+                    "icon": "🤔"
+                },
+                {
+                    "id": 3,
+                    "elementId": "stel-een-vraag",
+                    "caption": "STEL EEN VRAAG",
+                    "icon": "❓"
+                }
+            ]
+        }
+    ]
+}
