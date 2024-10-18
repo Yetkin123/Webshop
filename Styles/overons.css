@@ -1,0 +1,145 @@
+html {
+    scroll-padding-top: calc(var(--header-height) + 30px);
+}
+
+body {
+    background-color: var(--light-grey1);
+}
+
+#content-all {
+    margin: 30px;
+}
+
+#flex-container-vacatures {
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px;
+    gap: 30px;
+}
+
+.vacature-card {
+    background-color: var(--dark-grey2);
+    padding: 20px;
+    max-width: 250px;
+    border-radius: 10px;
+}
+
+.vacature-card p {
+    font-size: 20px;
+}
+
+.vacature-card ul {
+    color: var(--light-grey1);
+}
+
+#flex-container-locatie {
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px;
+    gap: 30px;
+    margin-bottom: 10px;
+}
+
+#flex-container-locatie ul {
+    font-size: 18px;
+}
+
+section ul {
+    padding-left: 20px;
+}
+
+/* hier start een nieuw onderdeel ONS IDEE */
+#content-onsidee,
+#content-locatie,
+#content-vacatures {
+    color: var(--coffee-color);
+    padding-bottom: 30px;
+}
+
+section h1 {
+    color: var(--dark-grey);
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+section h2 {
+    font-size: 30px;
+}
+
+section p {
+    color: var(--dark-grey2);
+    font-size: 22px;
+    padding-bottom: 20px;
+}
+
+.kleur-woord {
+    color: var(--orange-brown);
+    /* Kleur voor het specifieke woord binnen <span> */
+}
+
+/* hier start een nieuw onderdeel LOCATIE */
+
+#google-map iframe {
+    width: 530px;
+    height: 350px;
+    margin-bottom: 10px;
+    border: 0px;
+}
+
+#adresgegevens {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    padding: 50px 0px 50px 50px;
+}
+
+/* hier start een nieuw onderdeel VACATURES */
+
+.afbeelding-stijl {
+    max-width: 210px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    #flex-container-locatie {
+        display: block;
+    }
+    #adresgegevens {
+        padding: 50px 0px 50px 0px;
+    }
+}
+
+@media screen and (max-width: 700px)  {
+    #google-map iframe {
+        width: 250px;
+        height: 250px;
+    }
+
+    p {
+        font-size: 10px;
+    }
+
+    #flex-container-vacatures {
+        display: block;
+    }
+
+    .vacature-card {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #content-all {
+        margin: 10px;
+    }
+
+    #flex-container-vacatures {
+        margin: 10px;
+    }
+
+    #flex-container-locatie {
+        margin: 10px;
+    }
+}

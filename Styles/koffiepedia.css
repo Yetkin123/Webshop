@@ -1,0 +1,170 @@
+html {
+    scroll-padding-top: calc(var(--header-height) + 30px);
+}
+
+body {
+    background-color: var(--light-grey1);
+}
+
+img {
+    border-radius: 12px;
+}
+
+
+/* div 1 */
+
+#coffeefarmer {
+    max-width: 380px;
+    margin-right: 30px;
+    float: left;
+}
+
+.farmerofcoffee {
+    padding-top: 50px;
+    text-align: center;
+    margin: 0 40px 0 40px;
+}
+
+.farmerofcoffee h1 {
+    font-size: 40px;
+    color: var(--dark-grey);
+    margin-top: 6%;
+}
+
+.farmerofcoffee p {
+    font-size: 22px;
+    display: flow-root;
+    color: var(--dark-grey2);
+}
+
+/* div 2 */
+
+#coffeebeans {
+    max-width: 380px;
+    margin-left: 30px;
+    float: right;
+}
+
+.coffeehistory {
+    padding-block-start: 150px;
+    text-align: center;
+    margin: 0 40px 0 40px;
+}
+
+.coffeehistory h1 {
+    font-size: 40px;
+    color: var(--dark-grey);
+    margin-top: 4%;
+}
+
+.coffeehistory p {
+    font-size: 22px;
+    display: flow-root;
+    color: var(--dark-grey2);
+}
+
+/* div 3 */
+
+#coffeedrying {
+    max-width: 380px;
+    margin-right: 30px;
+    float: left;
+}
+
+.dryingcoffee {
+    padding-block-start: 150px;
+    text-align: center;
+    margin: 0 40px 0 40px;
+}
+
+.dryingcoffee h1 {
+    font-size: 40px;
+    color: var(--dark-grey);
+    margin-top: 5%;
+}
+
+.dryingcoffee p {
+    font-size: 22px;
+    display: flow-root;
+    color: var(--dark-grey2);
+}
+
+/* div 4 */
+
+#coffeebeansroast {
+    max-width: 380px;
+    margin-left: 30px;
+    float: right;
+}
+
+.coffeeroasting {
+    padding-block-start: 150px;
+    text-align: center;
+    margin: 0 40px 0 40px;
+}
+
+.coffeeroasting h1 {
+    font-size: 40px;
+    color: var(--dark-grey);
+    margin-top: 3%;
+}
+
+.coffeeroasting p {
+    font-size: 22px;
+    display: flow-root;
+    color: var(--dark-grey2);
+}
+
+/* div 5 */
+
+#coffeemachine {
+    max-width: 380px;
+    margin-right: 30px;
+    float: left;
+    margin-bottom: 30px;
+}
+
+.bestcoffeemachine {
+    padding-block-start: 150px;
+    text-align: center;
+    margin: 0 40px 0 40px;
+}
+
+.bestcoffeemachine h1 {
+    font-size: 40px;
+    color: var(--dark-grey);
+    margin-top: 5%;
+}
+
+.bestcoffeemachine p {
+    font-size: 22px;
+    display: flow-root;
+    color: var(--dark-grey2);
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 700px) {
+    :root {
+        --header-height: 250px;
+    }
+
+    #aside {
+        display: none;
+    }
+
+    img {
+        margin-bottom: 50px;
+    }
+
+    #coffeefarmer,
+    #coffeebeans,
+    #coffeedrying,
+    #coffeebeansroast,
+    #coffeemachine {
+        max-width: 100%;
+    }
+}
+
+@viewport {
+    width: fit-content;
+}
