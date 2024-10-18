@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <meta name="description" content="Home pagina van Yerothia Coffee. Koffie met een glimlach. Daar staan we voor. Alles in huis voor zakelijke klanten, webshop, informatie over koffie.">
+    <meta name="keywords" content="Koffie, Coffee, Yerothia, Thee, Suiker, Lekkker, Glimlach, Mok, Koffiemok, Zakelijk, Professioneel, Koffie-producten, Yerothia-Coffee, Bonen, Koffiebonen, Koffie bedrijf">
+    <title>Home - Yerothia Coffee</title>
+    <link rel="icon" type="image/ico" href="Images/favicon.ico">
+    <link rel="stylesheet" href="Styles/aside.css">
+    <link rel="stylesheet" href="Styles/footer.css">
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/home.css">
+    <link rel="stylesheet" href="Styles/header.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://db.onlinewebfonts.com/c/36fda95b699fea73e18a8f2d1ad6a6c0?family=Amasis+MT" rel="stylesheet"> 
+    <link href='https://fonts.googleapis.com/css?family=ADLaM%20Display' rel='stylesheet'>
+    <link href="https://db.onlinewebfonts.com/c/51a69624ea6dd3b2f3e808c39d367a95?family=Abadi+MT+Std+Extra+Light+It" rel="stylesheet"> 
+</head>
+<body>
+    <div class="container">
+        <!-- <aside id="aside">
+            
+        </aside> -->
+        <header id="header">
+
+        </header>
+        <section id="content">
+            <div class="background-image-home">
+                
+            </div>
+            <div class="content-page-block-grid">
+                <div class="content-page-block" id="page-block-producten" onclick="location.href='producten.html';">
+                    <h2>Producten</h2>
+                </div>
+                <div class="content-page-block" id="page-block-abonnementen" onclick="location.href='abonnementen.html';">
+                    <h2>Abonnementen</h2>
+                </div>
+                <div class="content-page-block" id="page-block-wiki" onclick="location.href='koffiepedia.html';">
+                    <h2>Koffiepedia</h2>
+                </div>
+                <div class="content-page-block" id="page-block-overons" onclick="location.href='overons.html';">
+                    <h2>Over ons</h2>
+                </div>
+                <div class="content-page-block" id="page-block-webshop">
+                    <h2>Webshop</h2>
+                </div>    
+            </div>
+            
+
+
+        </section>
+        <footer id="footer">
+
+        </footer>
+    </div>
+    <!-- <script src="https://kit.fontawesome.com/b086454024.js" crossorigin="anonymous"></script> -->
+    <script src="Scripts/general.js"></script>
+    <script src="Scripts/aside.js"></script>
+    <script src="Scripts/header.js"></script>
+    <script>
+        loadHtmlContent('HtmlParts/footer.html', 'footer', () => {});
+        // loadHtmlContent('HtmlParts/aside.html', 'aside', () => {
+        //     addClickListenerToAsideLogo();
+        //     loadAsideData(1);
+        // });
+        loadHtmlContent('HtmlParts/header.html', 'header', () => {
+            changeBackgroundOnScroll();
+        });
+
+    </script>
+</body>
+</html>

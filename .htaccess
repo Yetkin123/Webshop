@@ -1,0 +1,9 @@
+# Schakel de RewriteEngine in
+RewriteEngine On
+
+# Controleer of het verzoek naar een bestaand bestand of directory gaat
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Als het verzoek niet naar een bestaand bestand of directory gaat, stuur het door naar index.php
+RewriteRule ^(.*)$ index.php [QSA,L]
