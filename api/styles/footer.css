@@ -1,0 +1,112 @@
+#footer {
+    grid-area: footer;
+}
+
+footer {
+    background-color: #3b3838;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    /* margin-left: -40px; */
+}
+
+.footer-contact-info,
+.footer-social-media,
+.footer-newsletter {
+    width: 30%;
+}
+
+.footer-social-media button {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+#footer-flex-social-media-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.footer-social-media-icons {
+    fill: var(--orange-brown);
+}
+
+.footer-social-media-icons:hover {
+    fill: var(--coffee-color);
+}
+
+.footer-social-media button {
+    background-color: var(--orange-brown);
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    width: 40%;
+}
+
+.footer-newsletter input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-newsletter button {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    background-color: var(--orange-brown);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-newsletter button:hover {
+    background-color: var(--coffee-color);
+}
+
+@media screen and (max-width: 700px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-social-media-icons {
+        margin: 10px;
+    }
+
+    .footer-contact-info,
+    .footer-social-media {
+        width: 100%;
+    }
+
+    .footer-newsletter {
+        display: none;
+    }
+
+    /* .footer-social-media{
+        display: none;
+    } */
+    .footer-contact-info {
+        padding-bottom: 30px;
+    }
+
+    .footer-copyright {
+        margin-left: 0%;
+        /* margin-left: -9%; */
+    }
+}

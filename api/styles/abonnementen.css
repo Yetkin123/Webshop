@@ -1,0 +1,282 @@
+html {
+    scroll-padding-top: calc(var(--header-height) + 30px);
+}
+
+body {
+    background-color: var(--light-grey1);
+}
+
+#abonnementen-pagina {
+    color: var(--dark-grey);
+    padding: 10px 10px 50px 10px;
+    margin-top: calc(var(--header-height) + 30px);
+}
+
+#abonnementen-pagina h1 {
+    font-size: 40px;
+    margin-bottom: 18px;
+}
+
+#abonnementen-pagina h2 {
+    margin-bottom: 18px;
+}
+
+#abonnementen-pagina p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.flex-container-totaalconcept {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.flex-container-links {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container-links img {
+    margin-right: 20px;
+    max-height: 360px;
+    border-radius: 12px;
+}
+
+.flex-container-rechts {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-gegevens {
+    display: block;
+    margin-bottom: 18px;
+}
+
+.input-label, .input-field {
+    display: block;
+    font-size: 16px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--light-grey1);
+}
+
+#vraag {
+    height: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    font-size: 16px;
+    font-family: 'Noto Sans NKo Unjoined', sans-serif;
+    width: 100%;
+    max-width: 100%;
+    border-color: var(--light-grey1);
+    border-radius: 5px;
+    resize: none;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.abonnement-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 360px;
+    font-size: 16px;
+    color: var(--light-grey1);
+    padding: 20px;
+    background-color: var(--brown-color);
+    border-radius: 12px;
+    box-shadow: hsla(0, 0%, 86%, 0.8) 0px 0px 20px, hsla(0, 15%, 44%, 0.95) 0 0 20px inset;
+    margin: 0 auto;
+}
+
+.abonnement-title {
+    font-family: "Abadi MT Std Extra Bold It";
+    text-align: center;
+    padding: 20px;
+}
+
+.abonnement-image {
+    border-radius: 12px;
+    max-width: 320px;
+    display: block;
+}
+
+.abonnement-bedrijfssoort {
+    text-align: center;
+    padding: 20px;
+}
+
+.abonnement-info ul {
+    margin-left: 30px;
+}
+
+.abonnement-info {
+    width: 320px;
+    font-family: 'Noto Sans NKo Unjoined', sans-serif;
+    font-size: 17px;
+    padding: 40px 0px 40px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.vraag-aan-button {
+    background-color: var(--orange-brown);
+    cursor: pointer;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.vraag-aan-button:hover {
+    background-color: var(--coffee-color);
+}
+
+#stel-een-vraag {
+    display: flex;
+    justify-content: center;
+}
+
+#contact-formulier {
+    background-color: var(--brown-color);
+    padding: 40px;
+    width: 90%;
+    color: var(--light-grey1);
+    border-radius: 12px;
+}
+
+#flex-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#verzenden-button {
+    background-color: var(--orange-brown);
+    cursor: pointer;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#verzenden-button:hover {
+    background-color: var(--coffee-color);
+}
+
+/* Modal (Pop-up): Bedankt voor uw bericht */
+#modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+#modal-content {
+    background-color: var(--brown-color);
+    font-size: 20px;
+    padding: 20px;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: hsla(0, 0%, 0%, 0.9) 0px 0px 20px, hsla(0, 15%, 44%, 0.95) 0 0 20px inset;
+}
+
+#modal-content p {
+    background-color: var(--light-grey1);
+    padding: 10px;
+    border-radius: 12px;
+}
+
+#close-modal {
+    padding-bottom: 10px;
+    background-color: var(--brown-color);
+    display: flex;
+    justify-content: flex-end;
+    color: hsl(0, 0%, 95%);
+    font-size: 40px;
+    transition: 0.3s;
+}
+
+#close-modal:hover,
+#close-modal:focus {
+    color: hsl(0, 0%, 70%);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    .flex-container-links {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #contact-formulier h1 {
+        font-size: 30px;
+    }
+    #flex-button {
+        justify-content: center;
+    }
+
+@media screen and (max-width: 400px) {
+    #abonnementen-pagina {
+        padding: 20px;
+        padding-bottom: 20px;
+    }
+
+    .abonnement-card {
+        max-width: 310px;
+    }
+
+    .abonnement-image {
+        max-width: 280px;
+    }
+
+    .abonnement-info {
+        width: 280px;
+    }
+
+    .abonnement-bedrijfssoort {
+        padding: 0px;
+    }
+
+    #contact-formulier {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+}
+}
