@@ -1,0 +1,217 @@
+/* ...existing code... */
+.hero-gallery {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 75vh;        /* groter zodat foto's meer ruimte krijgen */
+    min-height: 560px;   /* hogere minimum voor desktop */
+    overflow: hidden;
+    background: #111;
+    box-sizing: border-box;
+    display: block;
+}
+
+.hero-gallery .slides {
+    display: flex !important;
+    height: 100% !important;
+    will-change: transform;
+    transition: transform 0.7s ease;
+    box-sizing: border-box;
+}
+
+.hero-gallery .slide {
+    /* slide breedte wordt door JS op pixels gezet; zorg dat min-width fallback heeft */
+    min-width: 100% !important;
+    width: 100% !important;
+    opacity: 1 !important;
+    background-size: cover;
+    background-position: center center !important; /* centreer zowel X als Y */
+    background-repeat: no-repeat !important;
+    position: relative;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+}
+
+.slide-overlay {
+    /* lichtere, smaller overlay zodat de foto meer zichtbaar blijft */
+    background: linear-gradient(90deg, rgba(0,0,0,0.38) 0%, rgba(0,0,0,0.12) 35%, rgba(0,0,0,0.48) 100%);
+    color: #fff;
+    padding: 1rem;
+    max-width: 520px;     /* minder breed, show meer image */
+    margin-left: 4%;
+    border-radius: 8px;
+}
+
+.slide-overlay p {
+    margin: 0 0 8px 0; /* 8px onderruimte tussen tekst en knop */
+}
+
+/* nav/dots snel zichtbaarheid */
+.gallery-prev, .gallery-next { position:absolute; top:50%; transform:translateY(-50%); z-index:5; }
+.gallery-dots { position:absolute; bottom:12px; left:50%; transform:translateX(-50%); z-index:5; display:flex; gap:8px; }
+
+/* navigation */
+.gallery-prev,
+.gallery-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.35);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 0.9rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    border-radius: 4px;
+}
+
+.gallery-prev { left: 1rem; }
+.gallery-next { right: 1rem; }
+
+.gallery-dots {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.gallery-dots .dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.gallery-dots .dot.active {
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0,0,0,0.3);
+}
+
+/* extra veilige marge voor knoppen/links in overlay */
+.slide-overlay .btn,
+.slide-overlay a.btn {
+    margin-top: 8px;
+    display: inline-block;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .slide-overlay {
+        padding: 0.9rem;
+        max-width: 90%;
+        margin-left: 5%;
+    }
+    .slide-overlay h1 { font-size: 1.4rem; }
+    .hero-gallery { height: 40vh; min-height: 260px; }
+    .gallery-prev, .gallery-next { padding: 0.4rem 0.6rem; font-size: 1.2rem; }
+}
+
+/* Forceer gallery zichtbaar in de grid-hoofdkolom */
+.hero-gallery {
+    /* zorg dat hij in de content-kolom komt en niet verschoven wordt */
+    grid-column: 2 / 3 !important;
+    width: 100% !important;
+    min-width: 320px !important;
+    left: auto !important;
+    transform: none !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+    z-index: 3 !important;
+}
+
+/* zorg dat slides container normaal meet */
+.hero-gallery .slides {
+    display: flex !important;
+    width: 100% !important;
+    height: 100% !important;
+    transition: transform 0.7s ease !important;
+}
+
+/* Zorg dat links in de slide-overlay geen standaard onderstreping/paars tonen */
+.slide-overlay a,
+.slide-overlay a:visited {
+    text-decoration: none !important;
+    color: var(--coffee-color, #7C4E29);
+    font-weight: 700;
+    display: inline-block;
+}
+
+/* SPECIFIEKE OVERRIDE VOOR KNOPPEN IN DE GALLERY */
+.slide-overlay a.btn,
+.slide-overlay .btn {
+    text-decoration: none !important;   /* geen underline */
+    color: #fff !important;              /* witte tekst */
+    background: var(--orange-brown, #cf791d);
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+}
+
+/* hover voor gallery-knoppen: lichtgrijs tekst, behoud achtergrond */
+.slide-overlay a.btn:hover,
+.slide-overlay .btn:hover,
+.slide-overlay a.btn:focus,
+.slide-overlay .btn:focus {
+    color: #e6e6e6 !important;  /* lichtgrijs */
+    text-decoration: none !important;
+    opacity: 1;
+}
+
+/* algemene link hover (niet-knop) blijft zoals eerder, maar knoppen zijn uitgesloten door specificiteit */
+.slide-overlay a:hover,
+.slide-overlay a:focus {
+    color: var(--orange-brown, #cf791d);
+    text-decoration: none;
+}
+
+/* --- vervang eventuele bestaande desktop positioning blocks door dit --- */
+@media (min-width: 601px) {
+    .hero-gallery {
+        /* in documentflow zodat content eronder komt */
+        position: relative;
+        margin-top: 100px; /* Y = 100px; X blijft 0 */
+        left: 0;
+        transform: none;
+
+        /* gewenste grotere zichtbare hoogte */
+        height: 80vh;
+        min-height: 640px;
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 10;
+        padding: 0;
+    }
+
+    .hero-gallery .slides {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+/* Hard override: forceer Y = 100px op desktop en normale flow op mobiel */
+@media (min-width: 601px) {
+    .hero-gallery {
+        position: relative !important;
+        margin-top: 100px !important; /* zet Y = 100px */
+        top: auto !important;
+        left: 0 !important;            /* X = 0 */
+        transform: none !important;
+        width: 100% !important;
+        z-index: 20 !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-gallery {
+        position: static !important;
+        margin-top: 0 !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+    }
+}

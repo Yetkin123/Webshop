@@ -78,6 +78,120 @@ a.content-page-block {
     transform: scale(1.05);
 }
 
+/* Feature grid (klein, responsief alternatief voor grote blokken) */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    padding: 2rem 1rem;
+    align-items: start;
+}
+
+.feature-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    /* laat hoogte van kaart bepalen door inhoud, verwijder geforceerde min-height */
+    min-height: 0;
+}
+
+/* Laat de media-container zich aanpassen aan de afbeelding (volle hoogte van de afbeelding tonen) */
+.feature-media {
+    height: auto;            /* geen harde hoogte meer */
+    overflow: visible;       /* afbeelding niet afkappen */
+    display: block;
+}
+
+.feature-media img {
+    width: 100%;
+    height: auto;            /* toon volledige afbeelding in hoogte */
+    object-fit: contain;     /* toont hele afbeelding zonder croppen */
+    display: block;
+}
+
+.feature-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    color: var(--dark-grey);
+}
+
+.feature-body h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--coffee-color);
+}
+
+.feature-body p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #5a5a5a;
+    flex: 1 0 auto;
+}
+
+.feature-body .btn {
+    align-self: start;
+    margin-top: 0.6rem;
+    background: var(--orange-brown);
+    color: #fff;
+    padding: 0.45rem 0.8rem;
+    border-radius: 6px;
+    text-decoration: none;   /* verwijder underline */
+}
+
+/* zorg dat alle .btn in de site geen underline tenzij expliciet anders gespecificeerd */
+.btn {
+    text-decoration: none;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+    .feature-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .feature-grid { grid-template-columns: 1fr; }
+    .feature-media { height: 180px; }
+}
+
+/* Fix overlap op kleine schermen */
+@media (max-width: 600px) {
+    .feature-grid { gap: 1rem; padding: 1rem; }
+
+    .feature-card {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        overflow: hidden; /* voorkomt dat body over media schuift */
+    }
+
+    .feature-media {
+        height: 180px;    /* vaste hoogte zodat tekst niet overlapt */
+        flex-shrink: 0;
+        overflow: hidden;
+        display: block;
+    }
+
+    .feature-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* vult container zonder lege ruimte */
+        display: block;
+    }
+
+    .feature-body {
+        padding: 0.9rem 1rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    .feature-body p { margin-bottom: 8px; }
+    .feature-body .btn { margin-top: 8px; }
+}
+
 @media screen and (max-width: 1000px) {
     .content-page-block-grid {
         grid-template-columns: 1fr;
