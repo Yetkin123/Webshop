@@ -83,6 +83,8 @@
     <script>
         loadHtmlContent('/api/includes/header.php', 'header', () => {
             changeBackgroundOnScroll();
+            // init hamburger after header is injected via AJAX (no effect if already initialized)
+            if (typeof initHeaderToggle === 'function') initHeaderToggle();
             // forceer herberekening zodat gallery correct positioneert
             window.dispatchEvent(new Event('resize'));
         });

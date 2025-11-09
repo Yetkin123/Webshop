@@ -1,3 +1,18 @@
+/* Forceer header sticky en boven de gallery zonder layout-shifts */
+.header-container {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    min-height: var(--header-height);
+    z-index: 9999;
+    background: rgba(59,56,56,0.00);
+    transition: background 0.25s ease, box-shadow 0.25s ease, opacity 0.5s;
+    opacity: 0.95;
+}
+
 .header-container nav {
     padding: 40px;
     display: flex;
@@ -12,14 +27,6 @@
     color: var(--orange-brown);
     text-transform: uppercase;
     user-select: none;
-}
-
-.header-container {
-    width: 100%;
-    height: 100%;
-    z-index: 3;
-    transition: 0.5s;
-    opacity: 0.95;
 }
 
 .dropdown-link:hover .dropdown-items {
@@ -37,29 +44,40 @@
     padding-top: 3px;
 }
 
+/* desktop: nav zichtbaar, geen hamburger */
+#header-top-nav {
+    display: flex;
+}
+
+.hamburger {
+    display: none;
+}
+
+/* MOBILE: hamburger visible, nav collapsed by max-height (takes no clickable space) */
 @media screen and (max-width: 700px) {
+    .header-container {
+        position: relative;
+        background: transparent;
+        padding-bottom: 0;
+    }
+
     .header-container nav {
         padding: 40px;
         display: block;
         z-index: 3;
-        /* flex-wrap: wrap; */
-        /* gap: 50px; */
         float: none;
     }
 
     .nav-item {
         display: flex;
+        padding: 10px;
     }
 
     .dropdown-items a {
         display: flex;
-        padding-top: 0px;
+        padding-top: 0;
         padding-bottom: 10px;
         flex-direction: column;
-    }
-
-    .nav-item {
-        padding: 10px;
     }
 
     .dropdown-link:hover .dropdown-items {
@@ -67,7 +85,114 @@
     }
 
     #header {
+        position: sticky;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* Hamburger menu */
+    .hamburger {
+        display: inline-block;
+        border: none;
+        background: transparent;
+        padding: 8px;
+        cursor: pointer;
+        z-index: 10010;
+    }
+
+    .hamburger .hamburger-box {
+        display: inline-block;
+        width: 28px;
+        height: 50px;
         position: relative;
     }
 
+    .hamburger .hamburger-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: var(--orange-brown);
+        transform: translateY(-50%);
+        box-shadow: 0 6px 0 var(--orange-brown), 0 -6px 0 var(--orange-brown);
+    }
+
+    /* collapsed state: occupies zero height and no pointer-events */
+    #header-top-nav {
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .28s ease, padding .18s ease;
+        pointer-events: none;
+        visibility: hidden;
+    }
+    #header-top-nav[aria-hidden="true"] {
+        max-height: 0 !important;
+        padding: 0 !important;
+        pointer-events: none !important;
+        visibility: hidden !important;
+    }
+
+    /* opened state: in-flow so it pushes content down (no overlap) */
+    .header-container.nav-open #header-top-nav,
+    #header-top-nav[aria-hidden="false"] {
+        max-height: 1000px; /* large enough for menu */
+        padding: 12px 14px;
+        overflow: visible;
+        pointer-events: auto;
+        visibility: visible;
+        position: static;
+        background: rgba(59,56,56,0.98);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+
+    /* ensure header still visually sits above content */
+    .header-container {
+        background: rgba(59,56,56,0.00); /* transparent until scroll */
+    }
+
+    .hamburger .hamburger-inner {
+        position: relative;
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--orange-brown);
+        transition: background .22s ease;
+    }
+    
+    /* extra lijnen via pseudo-elementen */
+    .hamburger .hamburger-inner::before,
+    .hamburger .hamburger-inner::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: var(--orange-brown);
+        transition: transform .22s ease, top .22s ease, opacity .18s ease;
+    }
+    
+    .hamburger .hamburger-inner::before { top: -8px; }
+    .hamburger .hamburger-inner::after  { top: 8px; }
+    
+    /* Open state: maak middenlijn transparant en vorm X met pseudo-elementen */
+    .header-container.nav-open .hamburger .hamburger-inner {
+        background: transparent;
+    }
+    .header-container.nav-open .hamburger .hamburger-inner::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+    .header-container.nav-open .hamburger .hamburger-inner::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    
+    /* Kleiner fine-tune: verberg visueel onnodige lijnen bij overgang */
+    .header-container.nav-open .hamburger .hamburger-inner,
+    .hamburger .hamburger-inner,
+    .hamburger .hamburger-inner::before,
+    .hamburger .hamburger-inner::after {
+        box-shadow: none !important;
+    }
 }

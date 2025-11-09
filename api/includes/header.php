@@ -1,6 +1,6 @@
 <script src="/api/scripts/header.js"></script>
 <div class="header-container" id="header-container">
-    <nav id="header-top-nav">
+    <nav id="header-top-nav" aria-hidden="true">
         <div class="nav-item">
             <a href="/">Home</a>
         </div>
