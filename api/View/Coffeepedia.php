@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Informatie over koffie vind je hier. ">
     <meta name="keywords" content="Koffie, Coffee, Yerothia, Thee, Suiker, Lekkker, Glimlach, Mok, Koffiemok, Zakelijk, Professioneel, Koffie-producten, Yerothia-Coffee, Bonen, Koffiebonen, Koffie bedrijf, Gedroogd, Telen, Geschiedenis, Smaak, Smaakverfijning, Koffieboer, Eerlijk">
     <title>Koffiepedia - Yerothia Coffee</title>

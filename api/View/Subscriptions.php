@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abonnementen - Yerothia Coffee</title>
     <link rel="icon" type="image/ico" href="/api/images/favicon.ico">
     <link rel="stylesheet" href="/api/styles/style.css">

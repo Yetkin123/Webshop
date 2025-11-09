@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Home pagina van Yerothia Coffee. Koffie met een glimlach. Daar staan we voor. Alles in huis voor zakelijke klanten, webshop, informatie over koffie.">
     <meta name="keywords" content="Koffie, Coffee, Yerothia, Thee, Suiker, Lekkker, Glimlach, Mok, Koffiemok, Zakelijk, Professioneel, Koffie-producten, Yerothia-Coffee, Bonen, Koffiebonen, Koffie bedrijf, Over ons, Vacatures, Koffie-missie, Missie, Visie, Locatie, Breda, Koffie Breda, Werken bij Yerothia">
     <title>Over ons - Yerothia Coffee</title>
