@@ -77,17 +77,10 @@
         </footer>
     </div>
     <!-- <script src="https://kit.fontawesome.com/b086454024.js" crossorigin="anonymous"></script> -->
-    <script src="/api/scripts/general.js"></script>
-    <script src="/api/scripts/aside.js"></script>
     <script src="/api/scripts/gallery.js"></script>
     <script>
-        loadHtmlContent('/api/includes/header.php', 'header', () => {
-            changeBackgroundOnScroll();
-            // init hamburger after header is injected via AJAX (no effect if already initialized)
-            if (typeof initHeaderToggle === 'function') initHeaderToggle();
-            // forceer herberekening zodat gallery correct positioneert
-            window.dispatchEvent(new Event('resize'));
-        });
+        if (typeof initHeaderToggle === 'function') initHeaderToggle();
+        if (typeof changeBackgroundOnScroll === 'function') changeBackgroundOnScroll();
     </script>
 </body>
 </html>

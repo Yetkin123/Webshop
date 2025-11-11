@@ -144,10 +144,6 @@ img {
 }
 
 @media screen and (max-width: 700px) {
-    :root {
-        --header-height: 250px;
-    }
-
     #aside {
         display: none;
     }

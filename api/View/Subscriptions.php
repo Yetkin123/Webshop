@@ -19,157 +19,163 @@
 </head>
 
 <body>
-    <div class="container">
-        <aside id="aside">
+    <div class="layout">
+        <?php
+        $pageKey = 'subscriptions';
+        include __DIR__ . '/../includes/aside.php';
+        ?>
+        <div class="container">
+            <header id="header">
+                <?php include __DIR__ . '/../includes/header.php'; ?>
+            </header>
+            <section id="content">
+                <div id="abonnementen-pagina">
+                    <!-- <h1 class="category-title">Abonnementen</h1> -->
+                    <div id="totaalconcept">
+                        <div class="flex-container-totaalconcept">
+                            <div class="flex-container-links">
+                                <img src="./api/images/Koffiebonen.jpg" alt="Koffiebonen">
+                            </div>
+                            <div class="flex-container-rechts">
+                                <h1>Proef de Perfectie</h1>
+                                <p>Onze abonnementen vormen complete koffie-ervaringen, samengesteld met zorg en
+                                    aandacht
+                                    voor
+                                    elk
+                                    detail. Elk
+                                    abonnement omvat niet alleen een hoogwaardig koffiezetapparaat, maar ook de meest
+                                    smaakvolle
+                                    koffiebonen,
+                                    toegewijde service, essentiële accessoires, en nog veel meer. Wij streven ernaar om
+                                    koffieliefhebbers zoals
+                                    jij een moeiteloze en genietbare koffieroutine te bieden, en ons abonnement is de
+                                    sleutel
+                                    tot het bereiken van dat perfecte kopje koffie, elke keer weer.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="maak-je-keuze">
+                        <h1>Maak je keuze</h1>
+                        <p>Yerothia biedt drie verschillende abonnementen aan. De Essentials-abonnement voor bedrijven
+                            met
+                            10-50 medewerkers. De Prestige-abonnement voor bedrijven met 50-250 medewerkers en de
+                            Signature-abonnement voor bedrijven met 250 medewerkers of meer. Voor de rest bent u vrij in
+                            welke koffiemachines en koffiebonen uw voorkeur hebben. Ook krijgen alle drie de
+                            abonnementen
+                            dezelfde service. Dus als u een kleine onderneming heeft, hoeft u zich geen zorgen te maken
+                            dat
+                            u minder aandacht krijgt omdat u een kleinere abonnement heeft.</p>
+                        <div class="flex-container">
+                            <div class="abonnement-card">
+                                <h2 class="abonnement-title">Essentials</h2>
+                                <img class="abonnement-image" src="./api/images/Essentials.png"
+                                    alt="Abonnement Essentials">
+                                <div class="abonnement-info">
+                                    <p class="abonnement-bedrijfssoort">Geschikt voor bedrijven met 10-50 medewerkers
+                                    </p>
+                                    <ul>
+                                        <li>2-4 koffiemachines</li>
+                                        <li>Vrije keuze uit koffiemachines</li>
+                                        <li>Vrije keuze uit koffiebonen</li>
+                                        <li>Geautomatiseerde bestelproces</li>
+                                        <li>Toegang tot alle verzamelde data</li>
+                                        <li>Tussentijds koffie bestellen mogelijk</li>
+                                        <li>24 uurs service bij storingen</li>
+                                    </ul>
+                                </div>
+                                <form action="#stel-een-vraag">
+                                    <button class="vraag-aan-button">Vraag aan</button>
+                                </form>
+                            </div>
+                            <div class="abonnement-card">
+                                <h2 class="abonnement-title">Prestige</h2>
+                                <img class="abonnement-image" src="./api/images/Prestige.png" alt="Abonnement Prestige">
+                                <div class="abonnement-info">
+                                    <p class="abonnement-bedrijfssoort">Geschikt voor bedrijven met 50-250 medewerkers
+                                    </p>
+                                    <ul>
+                                        <li>4-10 koffiemachines</li>
+                                        <li>Vrije keuze uit koffiemachines</li>
+                                        <li>Vrije keuze uit koffiebonen</li>
+                                        <li>Geautomatiseerde bestelproces</li>
+                                        <li>Toegang tot alle verzamelde data</li>
+                                        <li>Tussentijds koffie bestellen mogelijk</li>
+                                        <li>24 uurs service bij storingen</li>
+                                    </ul>
+                                </div>
+                                <form action="#stel-een-vraag">
+                                    <button class="vraag-aan-button">Vraag aan</button>
+                                </form>
+                            </div>
+                            <div class="abonnement-card">
+                                <h2 class="abonnement-title">Signature</h2>
+                                <img class="abonnement-image" src="./api/images/Signature.png"
+                                    alt="Abonnement Signature">
+                                <div class="abonnement-info">
+                                    <p class="abonnement-bedrijfssoort">Geschikt voor bedrijven met meer dan 250
+                                        medewerkers
+                                    </p>
+                                    <ul>
+                                        <li>Meer dan 10 koffiemachines</li>
+                                        <li>Vrije keuze uit koffiemachines</li>
+                                        <li>Vrije keuze uit koffiebonen</li>
+                                        <li>Geautomatiseerde bestelproces</li>
+                                        <li>Toegang tot alle verzamelde data</li>
+                                        <li>Tussentijds koffie bestellen mogelijk</li>
+                                        <li>24 uurs service bij storingen</li>
+                                    </ul>
+                                </div>
+                                <form action="#stel-een-vraag">
+                                    <button class="vraag-aan-button">Vraag aan</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="stel-een-vraag">
+                        <div id="contact-formulier">
+                            <h1>Contactformulier</h1>
+                            <h2>Uw gegevens</h2>
+                            <div id="contact-gegevens">
+                                <label class="input-label" for="bedrijfsnaam">Bedrijfsnaam</label>
+                                <input class="input-field" type="text" id="bedrijfsnaam" name="bedrijfsnaam">
+                                <label class="input-label" for="voornaam">Voornaam</label>
+                                <input class="input-field" type="text" id="voornaam" name="voornaam">
+                                <label class="input-label" for="achternaam">Achternaam</label>
+                                <input class="input-field" type="text" id="achternaam" name="achternaam">
+                                <label class="input-label" for="email">E-mail</label>
+                                <input class="input-field" type="email" id="email" name="email">
+                                <label class="input-label" for="telefoonnummer">Telefoonnummer</label>
+                                <input class="input-field" type="tel" id="telefoonnummer" name="telefoonnummer">
+                            </div>
+                            <h2>Uw vraag</h2>
+                            <textarea class="input-field" placeholder="U kunt hier uw vragen stellen" name="vraag"
+                                id="vraag"></textarea>
+                            <div id="flex-button">
+                                <button id="verzenden-button" type="submit">VERZENDEN</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer id="footer">
+                <?php include __DIR__ . '/../includes/footer.php'; ?>
+            </footer>
 
-        </aside>
-        <header id="header">
-            <?php include __DIR__ . '/../includes/header.php'; ?>
-        </header>
-        <section id="content">
-            <div id="abonnementen-pagina">
-                <!-- <h1 class="category-title">Abonnementen</h1> -->
-                <div id="totaalconcept">
-                    <div class="flex-container-totaalconcept">
-                        <div class="flex-container-links">
-                            <img src="./api/images/Koffiebonen.jpg" alt="Koffiebonen">
-                        </div>
-                        <div class="flex-container-rechts">
-                            <h1>Proef de Perfectie</h1>
-                            <p>Onze abonnementen vormen complete koffie-ervaringen, samengesteld met zorg en aandacht
-                                voor
-                                elk
-                                detail. Elk
-                                abonnement omvat niet alleen een hoogwaardig koffiezetapparaat, maar ook de meest
-                                smaakvolle
-                                koffiebonen,
-                                toegewijde service, essentiële accessoires, en nog veel meer. Wij streven ernaar om
-                                koffieliefhebbers zoals
-                                jij een moeiteloze en genietbare koffieroutine te bieden, en ons abonnement is de
-                                sleutel
-                                tot het bereiken van dat perfecte kopje koffie, elke keer weer.</p>
-                        </div>
-                    </div>
+            <!-- Modal -->
+            <div id="modal">
+                <div id="modal-content">
+                    <span id="close-modal">&times;</span>
+                    <p>Bedankt voor uw bericht. Uw bericht is verzonden. Wij zullen zo spoedig mogelijk contact met u
+                        opnemen!</p>
                 </div>
-                <div id="maak-je-keuze">
-                    <h1>Maak je keuze</h1>
-                    <p>Yerothia biedt drie verschillende abonnementen aan. De Essentials-abonnement voor bedrijven met
-                        10-50 medewerkers. De Prestige-abonnement voor bedrijven met 50-250 medewerkers en de
-                        Signature-abonnement voor bedrijven met 250 medewerkers of meer. Voor de rest bent u vrij in
-                        welke koffiemachines en koffiebonen uw voorkeur hebben. Ook krijgen alle drie de abonnementen
-                        dezelfde service. Dus als u een kleine onderneming heeft, hoeft u zich geen zorgen te maken dat
-                        u minder aandacht krijgt omdat u een kleinere abonnement heeft.</p>
-                    <div class="flex-container">
-                        <div class="abonnement-card">
-                            <h2 class="abonnement-title">Essentials</h2>
-                            <img class="abonnement-image" src="./api/images/Essentials.png" alt="Abonnement Essentials">
-                            <div class="abonnement-info">
-                                <p class="abonnement-bedrijfssoort">Geschikt voor bedrijven met 10-50 medewerkers</p>
-                                <ul>
-                                    <li>2-4 koffiemachines</li>
-                                    <li>Vrije keuze uit koffiemachines</li>
-                                    <li>Vrije keuze uit koffiebonen</li>
-                                    <li>Geautomatiseerde bestelproces</li>
-                                    <li>Toegang tot alle verzamelde data</li>
-                                    <li>Tussentijds koffie bestellen mogelijk</li>
-                                    <li>24 uurs service bij storingen</li>
-                                </ul>
-                            </div>
-                            <form action="#stel-een-vraag">
-                                <button class="vraag-aan-button">Vraag aan</button>
-                            </form>
-                        </div>
-                        <div class="abonnement-card">
-                            <h2 class="abonnement-title">Prestige</h2>
-                            <img class="abonnement-image" src="./api/images/Prestige.png" alt="Abonnement Prestige">
-                            <div class="abonnement-info">
-                                <p class="abonnement-bedrijfssoort">Geschikt voor bedrijven met 50-250 medewerkers</p>
-                                <ul>
-                                    <li>4-10 koffiemachines</li>
-                                    <li>Vrije keuze uit koffiemachines</li>
-                                    <li>Vrije keuze uit koffiebonen</li>
-                                    <li>Geautomatiseerde bestelproces</li>
-                                    <li>Toegang tot alle verzamelde data</li>
-                                    <li>Tussentijds koffie bestellen mogelijk</li>
-                                    <li>24 uurs service bij storingen</li>
-                                </ul>
-                            </div>
-                            <form action="#stel-een-vraag">
-                                <button class="vraag-aan-button">Vraag aan</button>
-                            </form>
-                        </div>
-                        <div class="abonnement-card">
-                            <h2 class="abonnement-title">Signature</h2>
-                            <img class="abonnement-image" src="./api/images/Signature.png" alt="Abonnement Signature">
-                            <div class="abonnement-info">
-                                <p class="abonnement-bedrijfssoort">Geschikt voor bedrijven met meer dan 250 medewerkers
-                                </p>
-                                <ul>
-                                    <li>Meer dan 10 koffiemachines</li>
-                                    <li>Vrije keuze uit koffiemachines</li>
-                                    <li>Vrije keuze uit koffiebonen</li>
-                                    <li>Geautomatiseerde bestelproces</li>
-                                    <li>Toegang tot alle verzamelde data</li>
-                                    <li>Tussentijds koffie bestellen mogelijk</li>
-                                    <li>24 uurs service bij storingen</li>
-                                </ul>
-                            </div>
-                            <form action="#stel-een-vraag">
-                                <button class="vraag-aan-button">Vraag aan</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div id="stel-een-vraag">
-                    <div id="contact-formulier">
-                        <h1>Contactformulier</h1>
-                        <h2>Uw gegevens</h2>
-                        <div id="contact-gegevens">
-                            <label class="input-label" for="bedrijfsnaam">Bedrijfsnaam</label>
-                            <input class="input-field" type="text" id="bedrijfsnaam" name="bedrijfsnaam">
-                            <label class="input-label" for="voornaam">Voornaam</label>
-                            <input class="input-field" type="text" id="voornaam" name="voornaam">
-                            <label class="input-label" for="achternaam">Achternaam</label>
-                            <input class="input-field" type="text" id="achternaam" name="achternaam">
-                            <label class="input-label" for="email">E-mail</label>
-                            <input class="input-field" type="email" id="email" name="email">
-                            <label class="input-label" for="telefoonnummer">Telefoonnummer</label>
-                            <input class="input-field" type="tel" id="telefoonnummer" name="telefoonnummer">
-                        </div>
-                        <h2>Uw vraag</h2>
-                        <textarea class="input-field" placeholder="U kunt hier uw vragen stellen" name="vraag" id="vraag"></textarea>
-                        <div id="flex-button">
-                            <button id="verzenden-button" type="submit">VERZENDEN</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <footer id="footer">
-            <?php include __DIR__ . '/../includes/footer.php'; ?>
-        </footer>
-
-        <!-- Modal -->
-        <div id="modal">
-            <div id="modal-content">
-                <span id="close-modal">&times;</span>
-                <p>Bedankt voor uw bericht. Uw bericht is verzonden. Wij zullen zo spoedig mogelijk contact met u
-                    opnemen!</p>
             </div>
         </div>
     </div>
     <!-- <script src="https://kit.fontawesome.com/b086454024.js" crossorigin="anonymous"></script> -->
     <script src="/api/scripts/abonnementen-modal.js"></script>
-    <script src="/api/scripts/general.js"></script>
-    <script src="/api/scripts/aside.js"></script>
     <script>
-        loadHtmlContent('/api/includes/aside.html', 'aside', () => {
-            addClickListenerToAsideLogo();
-            loadAsideData(6);
-        });
-        loadHtmlContent('/api/includes/header.php', 'header', () => {
-            changeBackgroundOnScroll();
-        });
+        if (typeof initHeaderToggle === 'function') initHeaderToggle();
+        if (typeof changeBackgroundOnScroll === 'function') changeBackgroundOnScroll();
     </script>
 </body>
 

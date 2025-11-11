@@ -2,59 +2,61 @@
     "pages": [
         {
             "id": 1,
+            "key": "products",
             "items": [
                 {
                     "id": 1,
-                    "elementId": "aside-content-list-item-1",
-                    "caption": "ABONNEMENTEN",
-                    "icon": "📅"
+                    "elementId": "category-koffiemachines",
+                    "caption": "KOFFIEMACHINES",
+                    "icon": "🍵"
                 },
                 {
                     "id": 2,
-                    "elementId": "aside-content-list-item-2",
-                    "caption": "APPARATEN",
-                    "icon": "☕"
+                    "elementId": "category-koffie",
+                    "caption": "KOFFIE",
+                    "icon": "☕️"
                 },
                 {
                     "id": 3,
-                    "elementId": "aside-content-list-item-3",
-                    "caption": "KOFFIE-INGREDIENTEN",
-                    "icon": "🌱"
+                    "elementId": "category-accessoires",
+                    "caption": "ACCESSOIRES",
+                    "icon": "🥛"
                 }
             ]
-            
         },
         {
             "id": 2,
+            "key": "subscriptions",
             "items": [
                 {
                     "id": 1,
-                    "elementId": "aside-content-list-item-1",
-                    "caption": "PIZZA",
-                    "icon": "🍕"
+                    "elementId": "totaalconcept",
+                    "caption": "TOTAALCONCEPT",
+                    "icon": "⚙️"
                 },
                 {
                     "id": 2,
-                    "elementId": "aside-content-list-item-2",
-                    "caption": "WERELD",
-                    "icon": "🌍"
+                    "elementId": "maak-je-keuze",
+                    "caption": "MAAK JE KEUZE",
+                    "icon": "🤔"
                 },
                 {
                     "id": 3,
-                    "elementId": "aside-content-list-item-3",
-                    "caption": "MUZIEK",
-                    "icon": "🎵"
+                    "elementId": "stel-een-vraag",
+                    "caption": "STEL EEN VRAAG",
+                    "icon": "❓"
                 }
             ]
         },
         {
             "id": 3,
+            "key": "about",
             "items": [
                 {
                     "id": 1,
                     "elementId": "content-onsidee",
                     "caption": "ONS IDEE",
-                    "icon": "💡"        
+                    "icon": "💡"
                 },
                 {
                     "id": 2,
@@ -72,12 +74,13 @@
         },
         {
             "id": 4,
+            "key": "coffeepedia",
             "items": [
                 {
                     "id": 1,
                     "elementId": "coffeefarmer",
                     "caption": "DE BOER",
-                    "icon": "👨‍🌾"        
+                    "icon": "👨‍🌾"
                 },
                 {
                     "id": 2,
@@ -102,53 +105,6 @@
                     "elementId": "coffeemachine",
                     "caption": "KOFFIEZETAPPARAAT",
                     "icon": "☕"
-                }
-              ]
-        },
-        {
-            "id": 5,
-            "items": [
-                {    
-                    "id": 1,
-                    "elementId": "category-koffiemachines",
-                    "caption": "KOFFIEMACHINES",
-                    "icon": "🍵"        
-                },
-                {
-                    "id": 2,
-                    "elementId": "category-koffie",
-                    "caption": "KOFFIE",
-                    "icon": "☕️"
-                },
-                {
-                    "id": 3,
-                    "elementId": "category-accessoires",
-                    "caption": "ACCESSOIRES",
-                    "icon": "🥛"
-                }
-            ]
-        }
-        ,
-        {
-            "id": 6,
-            "items": [
-                {    
-                    "id": 1,
-                    "elementId": "totaalconcept",
-                    "caption": "TOTAALCONCEPT",
-                    "icon": "⚙️"        
-                },
-                {
-                    "id": 2,
-                    "elementId": "maak-je-keuze",
-                    "caption": "MAAK JE KEUZE",
-                    "icon": "🤔"
-                },
-                {
-                    "id": 3,
-                    "elementId": "stel-een-vraag",
-                    "caption": "STEL EEN VRAAG",
-                    "icon": "❓"
                 }
             ]
         }

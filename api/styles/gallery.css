@@ -16,6 +16,12 @@
     will-change: transform;
     transition: transform 0.7s ease;
     box-sizing: border-box;
+    touch-action: pan-y;              /* laat verticale panning toe, horizontale swipes vangen we met JS */
+    -ms-touch-action: pan-y;
+    -webkit-overflow-scrolling: touch; /* smoother scrolling op iOS */
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .hero-gallery .slide {
@@ -120,7 +126,6 @@
 .hero-gallery {
     grid-column: 2 / 3 !important;
     width: 100% !important;
-    min-width: 320px !important;
     left: auto !important;
     transform: none !important;
     margin: 0 auto !important;

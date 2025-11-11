@@ -1,7 +1,22 @@
+aside {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+aside::after {
+    content: "";
+    display: block;
+}
+
 .aside-container {
     background-color: #E7E6E6;
-    width: 100%;
+    width: 200px;
     height: 100%;
+    transition: width 0.3s ease;
 }
 
 .aside-logo {
@@ -18,6 +33,8 @@
 .aside-logo img {
     width: 100%;
     height: 100%;
+    display: block;
+    object-fit: contain; /* keep aspect ratio */
 }
 
 .aside-content {
@@ -30,6 +47,7 @@
     padding: 10px;
     list-style: none;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .aside-content-list-item a {
@@ -41,7 +59,7 @@
     padding: 10px;
 }
 
-.aside-content-list-item a {
+.aside-content-list-item {
     display: flex;
     align-items: center;
     margin: 10px 0;
@@ -50,6 +68,9 @@
 .aside-content-list-item-text {
     color: var(--coffee-color);
     padding-left: 10px;
+    white-space: nowrap;
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 .aside-content-list-item-icon::before {
@@ -64,4 +85,25 @@
     height: 20px;
     display: inline-block;
     order: -1;
+}
+
+/* CSS-only aside collapse (checkbox toggle) */
+.aside-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+}
+
+.aside-toggle:checked ~ .aside-container {
+    width: 100px;
+}
+
+.aside-toggle:checked ~ .aside-container .aside-content-list-item-text {
+    opacity: 0;
+}
+
+.aside-logo {
+    cursor: pointer;
 }

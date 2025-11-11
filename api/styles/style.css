@@ -10,6 +10,8 @@
     --orange-brown: #cf791d;
     --black-color: #000000;
     --header-height: 100px;
+    --aside-expanded-width: 200px;
+    --aside-collapsed-width: 60px;
 }
 
 * {
@@ -29,24 +31,25 @@ body {
     width: 100%;
 }
 
+.layout {
+    display: flex;
+    flex-direction: row;
+}
+
 .container {
-    display: grid;
-    grid-template-columns: var(--aside-width) 1fr;
-    grid-template-areas:
-        'aside header'
-        'aside contentt'
-        'aside footer';
     transition: 0.5s;
     position: relative;
     width: 100%;
 }
 
+.container>* {
+    min-width: 0;
+}
+
 #aside {
-    position: fixed;
-    grid-area: aside;
-    width: var(--aside-width);
-    height: 100%;
-    transition: 0.5s;
+    align-self: start;
+    transition: width 220ms ease;
+    overflow: visible;
     z-index: 2;
 }
 
@@ -65,7 +68,8 @@ body {
     margin-top: 0;
     position: relative;
     z-index: 0;
-    padding-top: 0; /* gallery regelt z’n eigen offset */
+    padding-top: 0;
+    /* gallery regelt z’n eigen offset */
 }
 
 #footer {
@@ -83,8 +87,13 @@ body {
 }
 
 @media screen and (min-width: 701px) {
-    :root { --header-height: 100px; }
-    #header { height: var(--header-height); }
+    :root {
+        --header-height: 100px;
+    }
+
+    #header {
+        height: var(--header-height);
+    }
 }
 
 /* Mobile */
@@ -101,4 +110,84 @@ body {
     #header {
         height: var(--header-height);
     }
+}
+
+/* wanneer checkbox aangevinkt => collapse */
+#aside-toggle:checked+#aside {
+    width: var(--aside-collapsed-width);
+}
+
+/* verberg tekstlabels bij collapse */
+#aside-toggle:checked+#aside .aside-content-list-item-text {
+    display: none;
+}
+
+/* logo shift effect: links bij collapse */
+#aside .aside-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex: 0 0 auto;
+}
+
+#aside .aside-logo img {
+    transition: transform 180ms ease;
+}
+
+#aside-toggle:checked+#aside .aside-logo img {
+    transform: translateX(-6px);
+}
+
+/* zorg dat icon altijd zichtbaar blijft en niet te groot wordt */
+.aside-content-list-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+}
+
+.aside-content-list-item .aside-content-list-item-icon {
+    flex: 0 0 auto;
+}
+
+#aside .aside-content {
+    min-width: 0;
+    /* allow content to shrink */
+    flex: 1 1 auto;
+    /* fill remaining vertical space */
+    /* layout: center the list vertically on desktop */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* center the list vertically */
+    align-items: stretch;
+    /* allow list to take full width */
+    overflow: visible;
+    /* desktop: no internal scroll, items are centered */
+}
+
+/* keep mobile behavior: allow scrolling inside aside when screen is small */
+@media (max-width: 700px) {
+    #aside .aside-content {
+        overflow: auto;
+        /* scroll inside aside when content is long on mobile */
+        -webkit-overflow-scrolling: touch;
+        /* smooth scrolling on iOS */
+        justify-content: flex-start;
+        /* start from top on small screens */
+    }
+}
+
+#aside .aside-content-list-item-text {
+    transition: opacity 160ms ease;
+}
+
+/* small screens: standaard ingeklapt (optioneel) */
+@media (max-width: 700px) {
+    #aside {
+        width: var(--aside-collapsed-width);
+    }
+
+    /* houd checkbox functionaliteit beschikbaar (gebruik label om te openen) */
 }
